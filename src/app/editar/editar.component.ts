@@ -26,7 +26,7 @@ export class EditarComponent implements OnInit{
   obtenerTarjeta() {
     this.http.get<any>('https://app.gosummus.com/testing/api/tarjeta/' + this.numeroTarjeta)
       .subscribe(data => {
-        this.tarjeta = data;
+        this.tarjeta = data.tarjeta;
       });
   }
 
@@ -34,7 +34,7 @@ export class EditarComponent implements OnInit{
     this.http.put('https://app.gosummus.com/testing/api/tarjeta/' + this.numeroTarjeta, this.tarjeta)
       .subscribe(response => {
         console.log('Tarjeta actualizada:', response);
-        this.router.navigate(['/listar-tarjetas']);
+        this.router.navigate(['/listar']);
       });
   }
 }

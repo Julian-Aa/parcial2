@@ -13,7 +13,9 @@
   .mat-list-item {
     cursor: pointer;
   }
-  
+  .nav-item a{
+    color:black
+  }
   .mat-list-item:hover {
     background-color: #ECEFF1;
   }

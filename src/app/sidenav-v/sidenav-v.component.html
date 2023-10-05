@@ -1,12 +1,17 @@
-<div class="sidenav">
-    <h3>Tarjetas</h3>
-    <ul>
-      <li><a routerLink="/listar">Listar</a></li>
-      <li><a routerLink="/agregar">Agregar</a></li>
-      <li><a routerLink="/editar">Editar</a></li>
-    </ul>
-  </div>
-  <div class="content">
-    <ng-content></ng-content>
-  </div>
-  
+<div class="sidenav bg-light">
+  <h3 class="py-3">Tarjetas</h3>
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/listar">Listar</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/agregar">Agregar</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/listar">Editar</a>
+    </li>
+  </ul>
+</div>
+<div class="content">
+  <ng-content></ng-content>
+</div>
