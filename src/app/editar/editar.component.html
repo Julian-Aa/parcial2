@@ -1,21 +1,25 @@
 <div class="container">
   <h2>Editar Tarjeta</h2>
   <form (submit)="actualizarTarjeta()">
-    <div class="form-group col-md-6">
-      <label for="titular">Titular:</label>
-      <input type="text" class="form-control" id="titular" [(ngModel)]="tarjeta.titular" name="titular" required>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="titular">Titular:</label>
+        <input type="text" class="form-control" id="titular" [(ngModel)]="tarjeta.titular" name="titular" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="numero">Número:</label>
+        <input type="text" class="form-control" id="numero" [(ngModel)]="tarjeta.numero" name="numero" required>
+      </div>
     </div>
-    <div class="form-group col-md-6">
-      <label for="numero">Número:</label>
-      <input type="text" class="form-control" id="numero" [(ngModel)]="tarjeta.numero" name="numero" required>
-    </div>
-    <div class="form-group col-md-6">
-      <label for="fecha">Fecha (MM/YY):</label>
-      <input type="text" class="form-control" id="fecha" [(ngModel)]="tarjeta.fecha" name="fecha" pattern="^\d{2}/\d{2}$" required>
-    </div>
-    <div class="form-group col-md-6">
-      <label for="cvv">CVV (3 dígitos numéricos):</label>
-      <input type="text" class="form-control" id="cvv" [(ngModel)]="tarjeta.cvv" name="cvv" pattern="^\d{3}$" required>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="fecha">Fecha (MM/YY):</label>
+        <input type="text" class="form-control" id="fecha" [(ngModel)]="tarjeta.fecha" name="fecha" pattern="^\d{2}/\d{2}$" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="cvv">CVV (3 dígitos numéricos):</label>
+        <input type="text" class="form-control" id="cvv" [(ngModel)]="tarjeta.cvv" name="cvv" pattern="^\d{3}$" required>
+      </div>
     </div>
     <button type="submit" class="btn btn-primary">Guardar Cambios</button>
   </form>

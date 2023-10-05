@@ -20,11 +20,10 @@ export class LoginService {
   login(login:Login) {
     const options = {
       headers: {
-        'content-type': 'application/json',
-        Authorization: 'Bearer '+ environment.ACCESS_TOKEN
+        'content-type': 'application/json'
       }
     }
     let json = JSON.stringify(login)
-    return this.http.post<any>(this.urlBase+this.url,json,options)
+    return this.http.post<any>("https://app.gosummus.com/testing/api/login",json,options)
   }
 }

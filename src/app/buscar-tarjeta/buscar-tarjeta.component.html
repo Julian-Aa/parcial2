@@ -1,0 +1,8 @@
+<h2>Buscar Tarjeta por Titular</h2>
+<form (submit)="buscarPorTitular()">
+  <div class="form-group">
+    <label for="titular">Titular:</label>
+    <input type="text" id="titular" [(ngModel)]="titular" name="titular" class="form-control" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
